@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Никита Шикуц](https://up.htmlacademy.ru/react/4/user/331239).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Черкасов](https://htmlacademy.ru/profile/id385743).
 
 ---
 
