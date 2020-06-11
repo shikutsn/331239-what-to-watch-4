@@ -2,9 +2,16 @@ import React from "react";
 import Main from "../main/main.jsx";
 
 
-const App = () => {
+const App = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const {promoMovieTitle, promoMovieGenre, promoMovieReleaseYear} = props;
+
   return (
-    <Main />
+    <Main
+      promoMovieTitle = {promoMovieTitle}
+      promoMovieGenre = {promoMovieGenre}
+      promoMovieReleaseYear = {promoMovieReleaseYear}
+    />
   );
 };
 
