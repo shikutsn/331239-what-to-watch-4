@@ -18,6 +18,8 @@ const Main = (props) => {
     );
   };
 
+  const filmsMarkup = films.map(createFilmMarkup);
+
   return (
     <React.Fragment>
       <section className="movie-card">
@@ -113,7 +115,7 @@ const Main = (props) => {
           </ul>
 
           <div className="catalog__movies-list">
-            {films.map(createFilmMarkup).join(`\n`)}
+            {filmsMarkup}
           </div>
 
           <div className="catalog__more">
