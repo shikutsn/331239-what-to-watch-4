@@ -4,10 +4,9 @@ import PropTypes from "prop-types";
 const Main = (props) => {
   const {promoMovieTitle, promoMovieGenre, promoMovieReleaseYear, films} = props;
 
-  // TODO что-то говорили про key=  Нужно ли тут?
-  const createFilmMarkup = (filmTitle) => {
+  const createFilmMarkup = (filmTitle, filmId) => {
     return (
-      <article className="small-movie-card catalog__movies-card">
+      <article key={filmTitle + filmId} className="small-movie-card catalog__movies-card">
         <div className="small-movie-card__image">
           <img src="img/no-country-for-old-men.jpg" alt={filmTitle} width="280" height="175" />
         </div>
@@ -18,7 +17,7 @@ const Main = (props) => {
     );
   };
 
-  const filmsMarkup = films.map(createFilmMarkup);
+  const filmsMarkup = films.map((film, index) => createFilmMarkup(film, index));
 
   return (
     <React.Fragment>
