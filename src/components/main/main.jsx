@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
-  const {promoMovieTitle, promoMovieGenre, promoMovieReleaseYear, films} = props;
+  const {promoMovie, films} = props;
 
   const createFilmMarkup = (filmTitle, filmId) => {
     return (
@@ -51,10 +51,10 @@ const Main = (props) => {
             </div>
 
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{promoMovieTitle}</h2>
+              <h2 className="movie-card__title">{promoMovie.title}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{promoMovieGenre}</span>
-                <span className="movie-card__year">{promoMovieReleaseYear}</span>
+                <span className="movie-card__genre">{promoMovie.genre}</span>
+                <span className="movie-card__year">{promoMovie.releaseYear}</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -141,9 +141,11 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  promoMovieTitle: PropTypes.string.isRequired,
-  promoMovieGenre: PropTypes.string.isRequired,
-  promoMovieReleaseYear: PropTypes.number.isRequired,
+  promoMovie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+  }),
   films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 

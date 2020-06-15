@@ -4,22 +4,22 @@ import PropTypes from "prop-types";
 
 
 const App = (props) => {
-  const {promoMovieTitle, promoMovieGenre, promoMovieReleaseYear, films} = props;
+  const {promoMovie, films} = props;
 
   return (
     <Main
-      promoMovieTitle = {promoMovieTitle}
-      promoMovieGenre = {promoMovieGenre}
-      promoMovieReleaseYear = {promoMovieReleaseYear}
+      promoMovie = {promoMovie}
       films = {films}
     />
   );
 };
 
 App.propTypes = {
-  promoMovieTitle: PropTypes.string.isRequired,
-  promoMovieGenre: PropTypes.string.isRequired,
-  promoMovieReleaseYear: PropTypes.number.isRequired,
+  promoMovie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+  }),
   films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 

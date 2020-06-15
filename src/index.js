@@ -13,9 +13,11 @@ const AppData = {
 
 ReactDOM.render(
     <App
-      promoMovieTitle = {AppData.PROMO_MOVIE.TITLE}
-      promoMovieGenre = {AppData.PROMO_MOVIE.GENRE}
-      promoMovieReleaseYear = {AppData.PROMO_MOVIE.RELEASE_YEAR}
+      promoMovie = {{
+        title: AppData.PROMO_MOVIE.TITLE,
+        genre: AppData.PROMO_MOVIE.GENRE,
+        releaseYear: AppData.PROMO_MOVIE.RELEASE_YEAR,
+      }}
       films = {AppData.FILMS}
     />,
     document.querySelector(`#root`)
