@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
-  const {promoMovie, films} = props;
+  const {promoMovie, films, onMovieTitleClick} = props;
 
   const createFilmMarkup = (filmTitle, filmId) => {
     return (
@@ -10,7 +10,7 @@ const Main = (props) => {
         <div className="small-movie-card__image">
           <img src="img/no-country-for-old-men.jpg" alt={filmTitle} width="280" height="175" />
         </div>
-        <h3 className="small-movie-card__title">
+        <h3 className="small-movie-card__title" onClick={onMovieTitleClick}>
           <a className="small-movie-card__link" href="movie-page.html">{filmTitle}</a>
         </h3>
       </article>
@@ -147,6 +147,7 @@ Main.propTypes = {
     releaseYear: PropTypes.number.isRequired,
   }),
   films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onMovieTitleClick: PropTypes.func.isRequired,
 };
 
 
