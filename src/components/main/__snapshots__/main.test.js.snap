@@ -81,7 +81,7 @@ Array [
           <h2
             className="movie-card__title"
           >
-            The Grand Budapest Hotel
+            No Country for Old Men
           </h2>
           <p
             className="movie-card__meta"
@@ -89,12 +89,12 @@ Array [
             <span
               className="movie-card__genre"
             >
-              Drama
+              Noir
             </span>
             <span
               className="movie-card__year"
             >
-              2014
+              2009
             </span>
           </p>
           <div
@@ -264,7 +264,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Revenant"
+              alt="War of the Worlds"
               height="175"
               src="img/no-country-for-old-men.jpg"
               width="280"
@@ -277,7 +277,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Revenant
+              War of the Worlds
             </a>
           </h3>
         </article>
@@ -288,7 +288,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="No Country for Old Men"
+              alt="Midnight Special"
               height="175"
               src="img/no-country-for-old-men.jpg"
               width="280"
@@ -301,7 +301,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              No Country for Old Men
+              Midnight Special
             </a>
           </h3>
         </article>
@@ -312,7 +312,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Snatch"
+              alt="Seven Years in Tibet"
               height="175"
               src="img/no-country-for-old-men.jpg"
               width="280"
@@ -325,7 +325,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Snatch
+              Seven Years in Tibet
             </a>
           </h3>
         </article>
@@ -336,7 +336,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Bohemian Rhapsody"
+              alt="Macbeth"
               height="175"
               src="img/no-country-for-old-men.jpg"
               width="280"
@@ -349,7 +349,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Bohemian Rhapsody
+              Macbeth
             </a>
           </h3>
         </article>
@@ -360,7 +360,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Pulp Fiction"
+              alt="Aviator"
               height="175"
               src="img/no-country-for-old-men.jpg"
               width="280"
@@ -373,7 +373,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Pulp Fiction
+              Aviator
             </a>
           </h3>
         </article>
@@ -384,7 +384,7 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Shutter Island"
+              alt="Moonrise Kingdom"
               height="175"
               src="img/no-country-for-old-men.jpg"
               width="280"
@@ -397,7 +397,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Shutter Island
+              Moonrise Kingdom
             </a>
           </h3>
         </article>
