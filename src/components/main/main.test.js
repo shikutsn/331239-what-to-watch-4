@@ -8,7 +8,8 @@ describe(`Main`, () => {
     const tree = renderer
       .create(<Main
         promoMovie={testMocks.promoMovie}
-        films={testMocks.films} />)
+        films={testMocks.films}
+        onMovieTitleClick={() => {}} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
