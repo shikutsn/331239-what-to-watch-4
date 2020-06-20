@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
-import {appMocks} from "./mock/mocks.js";
+import {appMocks} from "./mocks/mocks.js";
 
 ReactDOM.render(
     <App

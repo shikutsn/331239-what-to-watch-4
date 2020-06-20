@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
-import {testMocks} from "../../mock/mocks.js";
+import {testMocks} from "../../mocks/mocks.js";
 
 describe(`Main`, () => {
   it(`Should correctly render with promo movie information and movie titles array`, () => {

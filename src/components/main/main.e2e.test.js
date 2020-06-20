@@ -2,7 +2,7 @@ import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
-import {testMocks} from "../../mock/mocks.js";
+import {testMocks} from "../../mocks/mocks.js";
 
 Enzyme.configure({
   adapter: new Adapter(),
