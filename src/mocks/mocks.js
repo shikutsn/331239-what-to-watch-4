@@ -3,8 +3,7 @@ const appMocks = {
     title: `The Grand Budapest Hotel`,
     genre: `Drama`,
     releaseYear: 2014,
-  },
-  films: [`Revenant`, `No Country for Old Men`, `Snatch`, `Bohemian Rhapsody`, `Pulp Fiction`, `Shutter Island`],
+  }
 };
 
 const testMocks = {

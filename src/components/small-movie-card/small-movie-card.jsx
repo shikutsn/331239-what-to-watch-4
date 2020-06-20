@@ -28,7 +28,7 @@ SmallMovieCard.propTypes = {
     posterSmall: PropTypes.string.isRequired
   }).isRequired,
   onMovieCardHover: PropTypes.func.isRequired,
-  onMovieTitleClick: PropTypes.func.isRequired
+  onMovieTitleClick: PropTypes.func.isRequired,
 };
 
 export default SmallMovieCard;

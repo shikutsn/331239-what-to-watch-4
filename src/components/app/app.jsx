@@ -24,7 +24,10 @@ App.propTypes = {
     genre: PropTypes.string.isRequired,
     releaseYear: PropTypes.number.isRequired,
   }),
-  films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    posterSmall: PropTypes.string.isRequired,
+  })),
 };
 
 

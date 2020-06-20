@@ -1,23 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import MoviesList from "../movies-list/movies-list.jsx";
 
 const Main = (props) => {
   const {promoMovie, films, onMovieTitleClick} = props;
-
-  const createFilmMarkup = (filmTitle, filmId) => {
-    return (
-      <article key={filmTitle + filmId} className="small-movie-card catalog__movies-card">
-        <div className="small-movie-card__image">
-          <img src="img/no-country-for-old-men.jpg" alt={filmTitle} width="280" height="175" />
-        </div>
-        <h3 className="small-movie-card__title" onClick={onMovieTitleClick}>
-          <a className="small-movie-card__link" href="movie-page.html">{filmTitle}</a>
-        </h3>
-      </article>
-    );
-  };
-
-  const filmsMarkup = films.map((film, index) => createFilmMarkup(film, index));
 
   return (
     <React.Fragment>
@@ -113,9 +99,10 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            {filmsMarkup}
-          </div>
+          <MoviesList
+            movies={films}
+            onMovieTitleClick={onMovieTitleClick}
+          />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -146,7 +133,10 @@ Main.propTypes = {
     genre: PropTypes.string.isRequired,
     releaseYear: PropTypes.number.isRequired,
   }),
-  films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    posterSmall: PropTypes.string.isRequired,
+  })),
   onMovieTitleClick: PropTypes.func.isRequired,
 };
 

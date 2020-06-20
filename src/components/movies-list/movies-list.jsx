@@ -27,7 +27,7 @@ class MoviesList extends PureComponent {
             key={movie.title + index}
             movie={movie}
             onMovieCardHover={this.handleMovieCardHover}
-            onMovieTitleClick={this.handleMovieTitleClick} />
+            onMovieTitleClick={this.props.onMovieTitleClick} />
         ))}
       </div>
     );
@@ -38,7 +38,8 @@ MoviesList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     posterSmall: PropTypes.string.isRequired
-  }).isRequired).isRequired
+  }).isRequired).isRequired,
+  onMovieTitleClick: PropTypes.func.isRequired,
 };
 
 export default MoviesList;
