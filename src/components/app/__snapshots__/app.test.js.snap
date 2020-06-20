@@ -259,31 +259,85 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="War of the Worlds"
+              alt="Pulp Fiction"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/pulp-fiction.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
+              onClick={[Function]}
             >
-              War of the Worlds
+              Pulp Fiction
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Shutter Island"
+              height="175"
+              src="img/shutter-island.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+              onClick={[Function]}
+            >
+              Shutter Island
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Revenant"
+              height="175"
+              src="img/revenant.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+              onClick={[Function]}
+            >
+              Revenant
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -291,17 +345,17 @@ Array [
             <img
               alt="Midnight Special"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/midnight-special.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
+              onClick={[Function]}
             >
               Midnight Special
             </a>
@@ -309,101 +363,105 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Seven Years in Tibet"
+              alt="Dardjeeling Limited"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/dardjeeling-limited.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
+              onClick={[Function]}
             >
-              Seven Years in Tibet
+              Dardjeeling Limited
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Macbeth"
+              alt="Orlando"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/orlando.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
+              onClick={[Function]}
             >
-              Macbeth
+              Orlando
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Aviator"
+              alt="Mindhunter"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/mindhunter.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
+              onClick={[Function]}
             >
-              Aviator
+              Mindhunter
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Moonrise Kingdom"
+              alt="What We Do in the Shadows"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/what-we-do-in-the-shadows.jpg"
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
-            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href="movie-page.html"
+              onClick={[Function]}
             >
-              Moonrise Kingdom
+              What We Do in the Shadows
             </a>
           </h3>
         </article>
