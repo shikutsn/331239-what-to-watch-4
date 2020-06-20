@@ -1,27 +1,27 @@
 export default [
   {
     title: `No Country for Old Men`,
-    posterSmall: `img/no-country-for-old-men.jpg`
+    posterSmall: `no-country-for-old-men.jpg`
   }, {
     title: `Bohemian Rhapsody`,
-    posterSmall: `img/bohemian-rhapsody.jpg`
+    posterSmall: `bohemian-rhapsody.jpg`
   }, {
     title: `Revenant`,
-    posterSmall: `img/revenant.jpg`
+    posterSmall: `revenant.jpg`
   }, {
     title: `Snatch`,
-    posterSmall: `img/snatch.jpg`
+    posterSmall: `snatch.jpg`
   }, {
     title: `Moonrise Kingdom`,
-    posterSmall: `img/moonrise-kingdom.jpg`
+    posterSmall: `moonrise-kingdom.jpg`
   }, {
     title: `War of the Worlds`,
-    posterSmall: `img/war-of-the-worlds.jpg`
+    posterSmall: `war-of-the-worlds.jpg`
   }, {
     title: `Seven Years in Tibet`,
-    posterSmall: `img/seven-years-in-tibet.jpg`
+    posterSmall: `seven-years-in-tibet.jpg`
   }, {
     title: `Johnny English`,
-    posterSmall: `img/johnny-english.jpg`
+    posterSmall: `johnny-english.jpg`
   }
 ];
