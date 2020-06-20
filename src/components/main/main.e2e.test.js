@@ -1,3 +1,4 @@
+// TODO e2e main тест не проходит, почему? 20.06 не разобрался, устал
 import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";

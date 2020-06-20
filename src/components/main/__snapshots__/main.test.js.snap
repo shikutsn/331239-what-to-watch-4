@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main Should correctly render with promo movie information and movie titles array 1`] = `
+exports[`Main should correctly render with promo movie information and movie titles array 1`] = `
 Array [
   <section
     className="movie-card"

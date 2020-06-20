@@ -18,6 +18,8 @@ const App = (props) => {
   );
 };
 
+// TODO заменить films на movies, чтобы везде стало одинаково
+
 App.propTypes = {
   promoMovie: PropTypes.shape({
     title: PropTypes.string.isRequired,
