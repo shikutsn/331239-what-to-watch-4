@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SmallMovieCard = (props) => {
-  //по ТЗ нужны два разных обработчика - ховера и клика, а в задании упомянут только ховер
+  // по ТЗ нужны два разных обработчика - ховера и клика, а в задании упомянут только ховер
   const {movie, onMovieCardHover, onMovieTitleClick} = props;
 
   return (
