@@ -6,7 +6,7 @@ import {testMocks} from "../../mocks/mocks.js";
 it(`Checks if movies list is rendered correctly`, () => {
   const tree = renderer
     .create(<MoviesList
-      movies = {testMocks.films}
+      movies = {testMocks.movies}
       onMovieTitleClick = {() => {}} />)
     .toJSON();
 

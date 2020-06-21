@@ -7,7 +7,7 @@ import films from "./mocks/films.js";
 ReactDOM.render(
     <App
       promoMovie = {appMocks.promoMovie}
-      films = {films}
+      movies = {films}
     />,
     document.querySelector(`#root`)
 );

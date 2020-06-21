@@ -8,7 +8,7 @@ class Main extends PureComponent {
   }
 
   render() {
-    const {promoMovie, films, onMovieTitleClick} = this.props;
+    const {promoMovie, movies, onMovieTitleClick} = this.props;
 
     return (
       <React.Fragment>
@@ -105,8 +105,8 @@ class Main extends PureComponent {
             </ul>
 
             <MoviesList
-              movies={films}
-              onMovieTitleClick={onMovieTitleClick}
+              movies = {movies}
+              onMovieTitleClick = {onMovieTitleClick}
             />
 
             <div className="catalog__more">
@@ -139,7 +139,7 @@ Main.propTypes = {
     genre: PropTypes.string.isRequired,
     releaseYear: PropTypes.number.isRequired,
   }),
-  films: PropTypes.arrayOf(PropTypes.shape({
+  movies: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     posterSmall: PropTypes.string.isRequired,
   })),

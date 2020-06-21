@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checks if small movie card is rendered correctly with hovor and click handlers 1`] = `
+exports[`Checks if small movie card is rendered correctly with hover and click handlers 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
   onMouseOver={[Function]}

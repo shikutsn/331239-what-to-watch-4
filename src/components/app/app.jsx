@@ -14,12 +14,12 @@ class App extends PureComponent {
   }
 
   render() {
-    const {promoMovie, films} = this.props;
+    const {promoMovie, movies} = this.props;
 
     return (
       <Main
         promoMovie = {promoMovie}
-        films = {films}
+        movies = {movies}
         onMovieTitleClick = {this.movieTitleClickHandler}
       />
     );
@@ -34,7 +34,7 @@ App.propTypes = {
     genre: PropTypes.string.isRequired,
     releaseYear: PropTypes.number.isRequired,
   }),
-  films: PropTypes.arrayOf(PropTypes.shape({
+  movies: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     posterSmall: PropTypes.string.isRequired,
   })),

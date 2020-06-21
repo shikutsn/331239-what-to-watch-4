@@ -16,8 +16,9 @@ describe(`e2e tests for Main`, () => {
     const mainComponent = shallow(
         <Main
           promoMovie = {testMocks.promoMovie}
-          films = {testMocks.films}
-          onMovieTitleClick = {movieTitleClickHandler} />
+          movies = {testMocks.movies}
+          onMovieTitleClick = {movieTitleClickHandler}
+        />
     );
 
     const movieTitles = mainComponent.find(`.small-movie-card__title`);

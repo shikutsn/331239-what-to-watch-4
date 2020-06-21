@@ -7,7 +7,7 @@ it(`App should correctly render with promo movie information and movies array`, 
   const tree = renderer
     .create(<App
       promoMovie = {testMocks.promoMovie}
-      films = {testMocks.films} />)
+      movies = {testMocks.movies} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

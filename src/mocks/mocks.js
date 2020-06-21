@@ -12,7 +12,7 @@ const testMocks = {
     genre: `Noir`,
     releaseYear: 2009,
   },
-  films: [
+  movies: [
     {
       title: `Pulp Fiction`,
       posterSmall: `pulp-fiction.jpg`

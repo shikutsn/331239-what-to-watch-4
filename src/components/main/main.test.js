@@ -7,7 +7,7 @@ it(`Main should correctly render with promo movie information and movie titles a
   const tree = renderer
     .create(<Main
       promoMovie = {testMocks.promoMovie}
-      films = {testMocks.films}
+      movies = {testMocks.movies}
       onMovieTitleClick = {() => {}} />)
     .toJSON();
 
