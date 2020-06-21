@@ -1,6 +1,5 @@
-// TODO e2e main тест не проходит, почему? 20.06 не разобрался, устал
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
 import {testMocks} from "../../mocks/mocks.js";
@@ -13,7 +12,7 @@ describe(`e2e tests for Main`, () => {
   it(`Checks if movie titles are clickable`, () => {
     const movieTitleClickHandler = jest.fn();
 
-    const mainComponent = shallow(
+    const mainComponent = mount(
         <Main
           promoMovie = {testMocks.promoMovie}
           movies = {testMocks.movies}
@@ -25,6 +24,6 @@ describe(`e2e tests for Main`, () => {
 
     movieTitles.forEach((movieTitle) => movieTitle.simulate(`click`));
 
-    expect(movieTitleClickHandler.mock.calls.length).toBe(testMocks.films.length);
+    expect(movieTitleClickHandler.mock.calls.length).toBe(testMocks.movies.length);
   });
 });
