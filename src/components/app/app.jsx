@@ -1,22 +1,30 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const movieTitleClickHandler = (evt) => {
-  evt.preventDefault();
-};
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
 
-const App = (props) => {
-  const {promoMovie, films} = props;
+    this.movieTitleClickHandler = this.movieTitleClickHandler.bind(this);
+  }
 
-  return (
-    <Main
-      promoMovie = {promoMovie}
-      films = {films}
-      onMovieTitleClick = {movieTitleClickHandler}
-    />
-  );
-};
+  movieTitleClickHandler(evt) {
+    evt.preventDefault();
+  }
+
+  render() {
+    const {promoMovie, films} = this.props;
+
+    return (
+      <Main
+        promoMovie = {promoMovie}
+        films = {films}
+        onMovieTitleClick = {this.movieTitleClickHandler}
+      />
+    );
+  }
+}
 
 // TODO заменить films на movies, чтобы везде стало одинаково
 
