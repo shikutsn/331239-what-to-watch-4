@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Should correctly render with promo movie information and movie titles array 1`] = `
+exports[`App should correctly render with promo movie information and movies array 1`] = `
 Array [
   <section
     className="movie-card"
@@ -259,14 +259,15 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="War of the Worlds"
+              alt="Pulp Fiction"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/pulp-fiction.jpg"
               width="280"
             />
           </div>
@@ -278,12 +279,65 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              War of the Worlds
+              Pulp Fiction
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Shutter Island"
+              height="175"
+              src="img/shutter-island.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+            onClick={[Function]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              Shutter Island
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Revenant"
+              height="175"
+              src="img/revenant.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+            onClick={[Function]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              Revenant
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -291,7 +345,7 @@ Array [
             <img
               alt="Midnight Special"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/midnight-special.jpg"
               width="280"
             />
           </div>
@@ -309,14 +363,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Seven Years in Tibet"
+              alt="Dardjeeling Limited"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/dardjeeling-limited.jpg"
               width="280"
             />
           </div>
@@ -328,20 +383,21 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Seven Years in Tibet
+              Dardjeeling Limited
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Macbeth"
+              alt="Orlando"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/orlando.jpg"
               width="280"
             />
           </div>
@@ -353,20 +409,21 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Macbeth
+              Orlando
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Aviator"
+              alt="Mindhunter"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/mindhunter.jpg"
               width="280"
             />
           </div>
@@ -378,20 +435,21 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Aviator
+              Mindhunter
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Moonrise Kingdom"
+              alt="What We Do in the Shadows"
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/what-we-do-in-the-shadows.jpg"
               width="280"
             />
           </div>
@@ -403,7 +461,7 @@ Array [
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Moonrise Kingdom
+              What We Do in the Shadows
             </a>
           </h3>
         </article>

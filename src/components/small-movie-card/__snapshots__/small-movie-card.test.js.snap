@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checks if small movie card is rendered correctly with hover and click handlers 1`] = `
+<article
+  className="small-movie-card catalog__movies-card"
+  onMouseOver={[Function]}
+>
+  <div
+    className="small-movie-card__image"
+  >
+    <img
+      alt="Dardjeeling Limited"
+      height="175"
+      src="img/dardjeeling-limited.jpg"
+      width="280"
+    />
+  </div>
+  <h3
+    className="small-movie-card__title"
+    onClick={[Function]}
+  >
+    <a
+      className="small-movie-card__link"
+      href="movie-page.html"
+    >
+      Dardjeeling Limited
+    </a>
+  </h3>
+</article>
+`;
