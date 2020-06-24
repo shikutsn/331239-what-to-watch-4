@@ -1,13 +1,28 @@
 import React, {PureComponent} from "react";
+import PropTypes from "prop-types";
 
+const SIMILAR_MOVIES_COUNT = 4;
 
 class MoviePage extends PureComponent {
   constructor(props) {
     super(props);
   }
 
-  render() {
+  _getRatingDescription() {
+    // TODO Текстовое представление оценки фильма формируется по следующим правилам:
+    // от 0 до 3 — Bad.
+    // от 3 до 5 — Normal.
+    // от 5 до 8 — Good.
+    // от 8 до 10 — Very good.
+    // 10 — Awesome.
+  }
 
+  _getSimilarMovies() {
+    // TODO возвращает до SIMILAR_MOVIES_COUNT похожих фильмов (по жанру) используя this.props.movies
+  }
+
+  render() {
+    // const {background, title, genre, releaseYear, poster, rating, description, director, starring} = this.props.movie;
 
     return (
       <section className="movie-card movie-card--full">
@@ -108,6 +123,25 @@ class MoviePage extends PureComponent {
 }
 
 MoviePage.propTypes = {
+  movie: PropTypes.shape({
+    background: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+    poster: PropTypes.string.isRequired,
+    rating: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      count: PropTypes.number.isRequired
+    }).isRequired,
+    description: PropTypes.string.isRequired,
+    director: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  }).isRequired,
+  movies: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    posterSmall: PropTypes.string.isRequired,
+  })),
+
 };
 
 export default MoviePage;
