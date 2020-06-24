@@ -1,5 +1,7 @@
 import React, {PureComponent} from "react";
+import {Switch, Route, BrowserRouter} from "react-router-dom";
 import Main from "../main/main.jsx";
+import MoviePage from "../movie-page/movie-page.jsx";
 import PropTypes from "prop-types";
 
 class App extends PureComponent {
@@ -13,7 +15,7 @@ class App extends PureComponent {
     evt.preventDefault();
   }
 
-  render() {
+  _renderApp() {
     const {promoMovie, movies} = this.props;
 
     return (
@@ -22,6 +24,21 @@ class App extends PureComponent {
         movies = {movies}
         onMovieTitleClick = {this.movieTitleClickHandler}
       />
+    );
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            {this._renderApp()}
+          </Route>
+          <Route exact path="/dev-movie-page">
+            <MoviePage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
