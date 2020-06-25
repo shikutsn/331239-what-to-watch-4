@@ -26,4 +26,23 @@ describe(`e2e tests for Main`, () => {
 
     expect(movieTitleClickHandler.mock.calls.length).toBe(testMocks.movies.length);
   });
+
+  it(`Checks if movie images are clickable`, () => {
+    const movieImageClickHandler = jest.fn();
+
+    const mainComponent = mount(
+        <Main
+          promoMovie = {testMocks.promoMovie}
+          movies = {testMocks.movies}
+          onMovieTitleClick = {movieImageClickHandler}
+        />
+    );
+
+    const movieImages = mainComponent.find(`.small-movie-card__image`);
+
+    movieImages.forEach((movieImage) => movieImage.simulate(`click`));
+
+    expect(movieImageClickHandler.mock.calls.length).toBe(testMocks.movies.length);
+  });
+
 });
