@@ -3,18 +3,58 @@ import PropTypes from "prop-types";
 
 const SIMILAR_MOVIES_COUNT = 4;
 
+
+
 class MoviePage extends PureComponent {
   constructor(props) {
     super(props);
+
   }
 
-  _getRatingDescription() {
-    // TODO Текстовое представление оценки фильма формируется по следующим правилам:
-    // от 0 до 3 — Bad.
-    // от 3 до 5 — Normal.
-    // от 5 до 8 — Good.
-    // от 8 до 10 — Very good.
-    // 10 — Awesome.
+  _getRatingDescription(rating) {
+    const RatingMap = {
+      DEFAULT: ``,
+      CASES: {
+        BAD: {
+          MIN: 0,
+          MAX: 3,
+          TEXT: `Bad`
+        },
+        NORMAL: {
+          MIN: 3,
+          MAX: 5,
+          TEXT: `Normal`
+        },
+        GOOD: {
+          MIN: 5,
+          MAX: 8,
+          TEXT: `Good`
+        },
+        VERY_GOOD: {
+          MIN: 8,
+          MAX: 10,
+          TEXT: `Very good`
+        },
+        AWESOME: {
+          MIN: 10,
+          MAX: 10,
+          TEXT: `Awesome`
+        },
+      },
+    };
+
+    for (const key in RatingMap.CASES) {
+      if (RatingMap.CASES.hasOwnProperty(key)) {
+        if (rating >= RatingMap.CASES[key].MIN && rating < RatingMap.CASES[key].MAX) {
+          return RatingMap.CASES[key].TEXT;
+        }
+        // выглядит искусственно, но как иначе предусмотреть предельный случай когда рейтинг равен 10?
+        if (RatingMap.CASES[key].MIN === RatingMap.CASES[key].MAX && rating === RatingMap.CASES[key].MAX) {
+          return RatingMap.CASES[key].TEXT;
+        }
+      }
+    }
+    return RatingMap.DEFAULT;
   }
 
   _getSimilarMovies() {
