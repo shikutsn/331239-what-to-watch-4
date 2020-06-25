@@ -35,7 +35,10 @@ class App extends PureComponent {
             {this._renderApp()}
           </Route>
           <Route exact path="/dev-movie-page">
-            <MoviePage />
+            <MoviePage
+              movie = {this.props.promoMovie}
+              movies = {this.props.movies}
+            />
           </Route>
         </Switch>
       </BrowserRouter>
@@ -45,10 +48,19 @@ class App extends PureComponent {
 
 App.propTypes = {
   promoMovie: PropTypes.shape({
+    background: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,
     releaseYear: PropTypes.number.isRequired,
-  }),
+    poster: PropTypes.string.isRequired,
+    rating: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      votesCount: PropTypes.number.isRequired
+    }).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    director: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  }).isRequired,
   movies: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     posterSmall: PropTypes.string.isRequired,
