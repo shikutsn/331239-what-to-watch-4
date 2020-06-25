@@ -27,6 +27,7 @@ class App extends PureComponent {
         <MoviePage
           movie = {promoMovie}
           movies = {movies}
+          onMovieTitleClick = {this.movieTitleClickHandler}
         />
       );
     }

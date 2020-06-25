@@ -1,4 +1,5 @@
 import React, {PureComponent} from "react";
+import MoviesList from "../movies-list/movies-list.jsx";
 import PropTypes from "prop-types";
 
 const SIMILAR_MOVIES_COUNT = 4;
@@ -56,14 +57,12 @@ class MoviePage extends PureComponent {
   }
 
   _getSimilarMovies() {
-    // TODO WIP
+    // TODO WIP должна отбирать по жанру, но жанров сейчас нет (они все одинаковые)
     return this.props.movies.slice().slice(0, SIMILAR_MOVIES_COUNT);
   }
 
   render() {
     const {background, title, genre, releaseYear, poster, rating, description, director, starring} = this.props.movie;
-
-    // TODO написать функцию, которая будет рендерить правильные похожие фильмы, а не статику как сейчас
 
     return (
       <React.Fragment>
@@ -160,44 +159,10 @@ class MoviePage extends PureComponent {
         <div className="page-content">
           <section className="catalog catalog--like-this">
             <h2 className="catalog__title">More like this</h2>
-
-            <div className="catalog__movies-list">
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Fantastic Beasts: The Crimes of Grindelwald</a>
-                </h3>
-              </article>
-
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Bohemian Rhapsody</a>
-                </h3>
-              </article>
-
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Macbeth</a>
-                </h3>
-              </article>
-
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/aviator.jpg" alt="Aviator" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Aviator</a>
-                </h3>
-              </article>
-            </div>
+            <MoviesList
+              movies = {this._getSimilarMovies()}
+              onMovieTitleClick = {this.props.onMovieTitleClick}
+            />
           </section>
 
           <footer className="page-footer">
@@ -249,7 +214,7 @@ MoviePage.propTypes = {
     director: PropTypes.string.isRequired,
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired).isRequired,
-
+  onMovieTitleClick: PropTypes.func.isRequired,
 };
 
 export default MoviePage;
