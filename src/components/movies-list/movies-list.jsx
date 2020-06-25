@@ -29,7 +29,7 @@ class MoviesList extends PureComponent {
             key={movie.title + index}
             movie={movie}
             onMovieCardHover={this.handleMovieCardHover}
-            onMovieTitleClick={onMovieTitleClick} />
+            onMovieCardClick={onMovieTitleClick} />
         ))}
       </div>
     );

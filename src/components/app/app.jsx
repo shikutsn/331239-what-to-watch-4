@@ -25,7 +25,7 @@ class App extends PureComponent {
     if (this.state.currentMovie) {
       return (
         <MoviePage
-          movie = {promoMovie}
+          movie = {this.state.currentMovie}
           movies = {movies}
           onMovieTitleClick = {this.movieTitleClickHandler}
         />
@@ -52,6 +52,7 @@ class App extends PureComponent {
             <MoviePage
               movie = {this.props.promoMovie}
               movies = {this.props.movies}
+              onMovieTitleClick = {this.movieTitleClickHandler}
             />
           </Route>
         </Switch>
