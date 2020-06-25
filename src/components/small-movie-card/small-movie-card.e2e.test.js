@@ -19,7 +19,7 @@ it(`Checks if mouseovered film data is getting passed to callback function`, () 
       <SmallMovieCard
         movie = {mockMovie}
         onMovieCardHover = {onMovieCardHover}
-        onMovieTitleClick = {() => {}}
+        onMovieCardClick = {() => {}}
       />
   );
 

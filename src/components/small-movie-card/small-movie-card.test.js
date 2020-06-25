@@ -12,7 +12,7 @@ it(`Checks if small movie card is rendered correctly with hover and click handle
     .create(<SmallMovieCard
       movie = {mockMovie}
       onMovieCardHover = {() => {}}
-      onMovieTitleClick = {() => {}} />)
+      onMovieCardClick = {() => {}} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();
