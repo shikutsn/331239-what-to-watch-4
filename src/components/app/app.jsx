@@ -8,15 +8,28 @@ class App extends PureComponent {
   constructor(props) {
     super(props);
 
+    this.state = {
+      currentMovie: null,
+    };
+
     this.movieTitleClickHandler = this.movieTitleClickHandler.bind(this);
   }
 
-  movieTitleClickHandler(evt) {
-    evt.preventDefault();
+  movieTitleClickHandler(newMovie) {
+    this.setState({currentMovie: newMovie});
   }
 
   _renderApp() {
     const {promoMovie, movies} = this.props;
+
+    if (this.state.currentMovie) {
+      return (
+        <MoviePage
+          movie = {promoMovie}
+          movies = {movies}
+        />
+      );
+    }
 
     return (
       <Main
@@ -62,9 +75,20 @@ App.propTypes = {
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
   movies: PropTypes.arrayOf(PropTypes.shape({
+    background: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+    poster: PropTypes.string.isRequired,
     posterSmall: PropTypes.string.isRequired,
-  })),
+    rating: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      votesCount: PropTypes.number.isRequired
+    }).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    director: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  }).isRequired).isRequired,
 };
 
 
