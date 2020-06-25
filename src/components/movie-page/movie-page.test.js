@@ -1,18 +1,17 @@
-// import React from "react";
-// import renderer from "react-test-renderer";
+import React from "react";
+import renderer from "react-test-renderer";
 import MoviePage from "./movie-page.jsx";
-// import {testMocks} from "../../mocks/mocks.js";
+import {testMocks} from "../../mocks/mocks.js";
 
 it(`Movie page should correctly render`, () => {
-  // WIP
-  // const tree = renderer
-  //   .create(<Main
-  //     promoMovie = {testMocks.promoMovie}
-  //     movies = {testMocks.movies}
-  //     onMovieTitleClick = {() => {}} />)
-  //   .toJSON();
-  //
-  // expect(tree).toMatchSnapshot();
+  const tree = renderer
+    .create(<MoviePage
+      movie = {testMocks.promoMovie}
+      movies = {testMocks.movies}
+      onMovieTitleClick = {() => {}} />)
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
 it(`Tests if _getRatingDescription returns correct rating to text values`, () => {
