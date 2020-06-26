@@ -7,49 +7,20 @@ const SIMILAR_MOVIES_COUNT = 4;
 class MoviePage extends PureComponent {
   constructor(props) {
     super(props);
+
   }
 
   static _getRatingDescription(rating) {
-    const RatingMap = {
-      DEFAULT: ``,
-      CASES: [
-        {
-          MIN: 0,
-          MAX: 3,
-          TEXT: `Bad`,
-        },
-        {
-          MIN: 3,
-          MAX: 5,
-          TEXT: `Normal`,
-        },
-        {
-          MIN: 5,
-          MAX: 8,
-          TEXT: `Good`,
-        },
-        {
-          MIN: 8,
-          MAX: 10,
-          TEXT: `Very good`,
-        },
-        {
-          MIN: 10,
-          MAX: 10,
-          TEXT: `Awesome`,
-        },
-      ],
-    };
-
-    for (const key of RatingMap.CASES) {
-      // (key.MIN === key.MAX && rating === key.MAX) - на случай если min = max, то есть значение, а не диапазон
-      if ((rating >= key.MIN && rating < key.MAX) || (key.MIN === key.MAX && rating === key.MAX)) {
-        return key.TEXT;
-      }
+    switch (true) {
+      case (rating < 0 || rating > 10): return ``;
+      case (rating < 3): return `Bad`;
+      case (rating < 5): return `Normal`;
+      case (rating < 8): return `Good`;
+      case (rating < 10): return `Very good`;
+      case (rating === 10): return `Awesome`;
     }
-    return RatingMap.DEFAULT;
+    return ``;
   }
-
 
   _getSimilarMovies() {
     // TODO WIP должна отбирать по жанру, но жанров сейчас нет (они все одинаковые)

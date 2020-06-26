@@ -16,7 +16,6 @@ it(`Movie page should correctly render`, () => {
 
 it(`Tests if _getRatingDescription returns correct rating to text values`, () => {
   // npm run test.jest -- -t "_getRatingDescription"
-  // const moviePageComponent = new MoviePage();
 
   expect(MoviePage._getRatingDescription(0)).toBe(`Bad`);
   expect(MoviePage._getRatingDescription(1.5)).toBe(`Bad`);
