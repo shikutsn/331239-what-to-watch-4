@@ -13,44 +13,39 @@ class MoviePage extends PureComponent {
   _getRatingDescription(rating) {
     const RatingMap = {
       DEFAULT: ``,
-      CASES: {
-        BAD: {
+      CASES: [
+        {
           MIN: 0,
           MAX: 3,
           TEXT: `Bad`
         },
-        NORMAL: {
+        {
           MIN: 3,
           MAX: 5,
           TEXT: `Normal`
         },
-        GOOD: {
+        {
           MIN: 5,
           MAX: 8,
           TEXT: `Good`
         },
-        VERY_GOOD: {
+        {
           MIN: 8,
           MAX: 10,
           TEXT: `Very good`
         },
-        AWESOME: {
+        {
           MIN: 10,
           MAX: 10,
           TEXT: `Awesome`
         },
-      },
+      ],
     };
 
-    for (const key in RatingMap.CASES) {
-      if (RatingMap.CASES.hasOwnProperty(key)) {
-        if (rating >= RatingMap.CASES[key].MIN && rating < RatingMap.CASES[key].MAX) {
-          return RatingMap.CASES[key].TEXT;
-        }
-        // выглядит искусственно, но как иначе предусмотреть предельный случай когда рейтинг равен 10?
-        if (RatingMap.CASES[key].MIN === RatingMap.CASES[key].MAX && rating === RatingMap.CASES[key].MAX) {
-          return RatingMap.CASES[key].TEXT;
-        }
+    for (const key of RatingMap.CASES) {
+      // (key.MIN === key.MAX && rating === key.MAX) - на случай если min = max, то есть значение, а не диапазон
+      if ((rating >= key.MIN && rating < key.MAX) || (key.MIN === key.MAX && rating === key.MAX)) {
+        return key.TEXT;
       }
     }
     return RatingMap.DEFAULT;

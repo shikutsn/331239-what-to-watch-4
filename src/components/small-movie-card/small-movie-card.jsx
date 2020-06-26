@@ -7,7 +7,6 @@ class SmallMovieCard extends PureComponent {
   }
 
   render() {
-    // по ТЗ нужны два разных обработчика - ховера и клика, а в задании упомянут только ховер
     const {movie, onMovieCardHover, onMovieCardClick} = this.props;
 
     return (
