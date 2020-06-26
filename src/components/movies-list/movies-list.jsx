@@ -29,7 +29,7 @@ class MoviesList extends PureComponent {
             key={movie.title + index}
             movie={movie}
             onMovieCardHover={this.handleMovieCardHover}
-            onMovieTitleClick={onMovieTitleClick} />
+            onMovieCardClick={onMovieTitleClick} />
         ))}
       </div>
     );
@@ -38,8 +38,19 @@ class MoviesList extends PureComponent {
 
 MoviesList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({
+    background: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    posterSmall: PropTypes.string.isRequired
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+    poster: PropTypes.string.isRequired,
+    posterSmall: PropTypes.string.isRequired,
+    rating: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      votesCount: PropTypes.number.isRequired
+    }).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    director: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired).isRequired,
   onMovieTitleClick: PropTypes.func.isRequired,
 };
