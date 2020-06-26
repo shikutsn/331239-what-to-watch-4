@@ -4,40 +4,39 @@ import PropTypes from "prop-types";
 
 const SIMILAR_MOVIES_COUNT = 4;
 
-
 class MoviePage extends PureComponent {
   constructor(props) {
     super(props);
   }
 
-  _getRatingDescription(rating) {
+  static _getRatingDescription(rating) {
     const RatingMap = {
       DEFAULT: ``,
       CASES: [
         {
           MIN: 0,
           MAX: 3,
-          TEXT: `Bad`
+          TEXT: `Bad`,
         },
         {
           MIN: 3,
           MAX: 5,
-          TEXT: `Normal`
+          TEXT: `Normal`,
         },
         {
           MIN: 5,
           MAX: 8,
-          TEXT: `Good`
+          TEXT: `Good`,
         },
         {
           MIN: 8,
           MAX: 10,
-          TEXT: `Very good`
+          TEXT: `Very good`,
         },
         {
           MIN: 10,
           MAX: 10,
-          TEXT: `Awesome`
+          TEXT: `Awesome`,
         },
       ],
     };
@@ -50,6 +49,7 @@ class MoviePage extends PureComponent {
     }
     return RatingMap.DEFAULT;
   }
+
 
   _getSimilarMovies() {
     // TODO WIP должна отбирать по жанру, но жанров сейчас нет (они все одинаковые)
@@ -136,7 +136,7 @@ class MoviePage extends PureComponent {
                 <div className="movie-rating">
                   <div className="movie-rating__score">{rating.value}</div>
                   <p className="movie-rating__meta">
-                    <span className="movie-rating__level">{this._getRatingDescription(rating.value)}</span>
+                    <span className="movie-rating__level">{MoviePage._getRatingDescription(rating.value)}</span>
                     <span className="movie-rating__count">{rating.votesCount} ratings</span>
                   </p>
                 </div>

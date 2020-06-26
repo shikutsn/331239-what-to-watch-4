@@ -30,7 +30,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `bohemian-rhapsody.jpg`,
     rating: {
-      value: 8.9,
+      value: 3.5,
       votesCount: 240,
     },
     description: [
@@ -53,7 +53,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `revenant.jpg`,
     rating: {
-      value: 8.9,
+      value: 5.7,
       votesCount: 240,
     },
     description: [
@@ -76,7 +76,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `snatch.jpg`,
     rating: {
-      value: 8.9,
+      value: 1.9,
       votesCount: 240,
     },
     description: [
@@ -99,7 +99,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `moonrise-kingdom.jpg`,
     rating: {
-      value: 8.9,
+      value: 10,
       votesCount: 240,
     },
     description: [
@@ -122,7 +122,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `war-of-the-worlds.jpg`,
     rating: {
-      value: 8.9,
+      value: 6.9,
       votesCount: 240,
     },
     description: [
@@ -145,7 +145,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `seven-years-in-tibet.jpg`,
     rating: {
-      value: 8.9,
+      value: 2.9,
       votesCount: 240,
     },
     description: [
@@ -168,7 +168,7 @@ export default [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `johnny-english.jpg`,
     rating: {
-      value: 8.9,
+      value: 5,
       votesCount: 240,
     },
     description: [
