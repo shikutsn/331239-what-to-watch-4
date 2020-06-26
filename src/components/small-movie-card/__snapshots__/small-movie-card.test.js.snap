@@ -10,9 +10,9 @@ exports[`Checks if small movie card is rendered correctly with hover and click h
     onClick={[Function]}
   >
     <img
-      alt="Dardjeeling Limited"
+      alt="No Country for Old Men"
       height="175"
-      src="img/dardjeeling-limited.jpg"
+      src="img/no-country-for-old-men.jpg"
       width="280"
     />
   </div>
@@ -24,7 +24,7 @@ exports[`Checks if small movie card is rendered correctly with hover and click h
       className="small-movie-card__link"
       href="movie-page.html"
     >
-      Dardjeeling Limited
+      No Country for Old Men
     </a>
   </h3>
 </article>

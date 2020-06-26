@@ -16,17 +16,17 @@ it(`Movie page should correctly render`, () => {
 
 it(`Tests if _getRatingDescription returns correct rating to text values`, () => {
   // npm run test.jest -- -t "_getRatingDescription"
-  const moviePageComponent = new MoviePage();
+  // const moviePageComponent = new MoviePage();
 
-  expect(moviePageComponent._getRatingDescription(0)).toBe(`Bad`);
-  expect(moviePageComponent._getRatingDescription(1.5)).toBe(`Bad`);
-  expect(moviePageComponent._getRatingDescription(3)).toBe(`Normal`);
-  expect(moviePageComponent._getRatingDescription(5)).toBe(`Good`);
-  expect(moviePageComponent._getRatingDescription(7)).toBe(`Good`);
-  expect(moviePageComponent._getRatingDescription(8)).toBe(`Very good`);
-  expect(moviePageComponent._getRatingDescription(10)).toBe(`Awesome`);
-  expect(moviePageComponent._getRatingDescription(-5)).toBe(``);
-  expect(moviePageComponent._getRatingDescription(-11)).toBe(``);
-  expect(moviePageComponent._getRatingDescription(Math.random() * (-100))).toBe(``);
-  expect(moviePageComponent._getRatingDescription(Math.random() * 10 + 10)).toBe(``);
+  expect(MoviePage._getRatingDescription(0)).toBe(`Bad`);
+  expect(MoviePage._getRatingDescription(1.5)).toBe(`Bad`);
+  expect(MoviePage._getRatingDescription(3)).toBe(`Normal`);
+  expect(MoviePage._getRatingDescription(5)).toBe(`Good`);
+  expect(MoviePage._getRatingDescription(7)).toBe(`Good`);
+  expect(MoviePage._getRatingDescription(8)).toBe(`Very good`);
+  expect(MoviePage._getRatingDescription(10)).toBe(`Awesome`);
+  expect(MoviePage._getRatingDescription(-5)).toBe(``);
+  expect(MoviePage._getRatingDescription(-11)).toBe(``);
+  expect(MoviePage._getRatingDescription(Math.random() * (-100))).toBe(``);
+  expect(MoviePage._getRatingDescription(Math.random() * 10 + 10)).toBe(``);
 });

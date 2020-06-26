@@ -9,7 +9,7 @@ Enzyme.configure({
 });
 
 describe(`e2e tests for Main`, () => {
-  it(`Checks if movie titles are clickable`, () => {
+  it(`Checks if movie titles are clickable in Main`, () => {
     const movieTitleClickHandler = jest.fn();
 
     const mainComponent = mount(
@@ -27,7 +27,7 @@ describe(`e2e tests for Main`, () => {
     expect(movieTitleClickHandler.mock.calls.length).toBe(testMocks.movies.length);
   });
 
-  it(`Checks if movie images are clickable`, () => {
+  it(`Checks if movie images are clickable in Main`, () => {
     const movieImageClickHandler = jest.fn();
 
     const mainComponent = mount(

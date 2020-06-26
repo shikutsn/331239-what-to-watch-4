@@ -32,8 +32,19 @@ class SmallMovieCard extends PureComponent {
 
 SmallMovieCard.propTypes = {
   movie: PropTypes.shape({
+    background: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    posterSmall: PropTypes.string.isRequired
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+    poster: PropTypes.string.isRequired,
+    posterSmall: PropTypes.string.isRequired,
+    rating: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      votesCount: PropTypes.number.isRequired
+    }).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    director: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
   onMovieCardHover: PropTypes.func.isRequired,
   onMovieCardClick: PropTypes.func.isRequired,

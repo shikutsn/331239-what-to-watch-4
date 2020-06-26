@@ -5,6 +5,7 @@ const appMocks = {
     genre: `Drama`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    posterSmall: `pulp-fiction.jpg`,
     rating: {
       value: 8.9,
       votesCount: 240,
