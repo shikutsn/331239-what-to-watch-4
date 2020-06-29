@@ -1,22 +1,13 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import SmallMovieCard from "../small-movie-card/small-movie-card.jsx";
+import withVideoHover from "../../hocs/with-video-hover/with-video-hover.jsx";
+
+const SmallMovieCardWrapped = withVideoHover(SmallMovieCard);
 
 class MoviesList extends PureComponent {
   constructor(props) {
     super(props);
-
-    this.state = {
-      activeMovie: null,
-    };
-
-    this.handleMovieCardHover = this.handleMovieCardHover.bind(this);
-  }
-
-  handleMovieCardHover(hoveredMovie) {
-    this.setState({
-      activeMovie: hoveredMovie,
-    });
   }
 
   render() {
@@ -25,11 +16,10 @@ class MoviesList extends PureComponent {
     return (
       <div className="catalog__movies-list">
         {movies.map((movie, index) => (
-          <SmallMovieCard
-            key={movie.title + index}
-            movie={movie}
-            onMovieCardHover={this.handleMovieCardHover}
-            onMovieCardClick={onMovieTitleClick} />
+          <SmallMovieCardWrapped
+            key = {movie.title + index}
+            movie = {movie}
+            onMovieCardClick = {onMovieTitleClick} />
         ))}
       </div>
     );

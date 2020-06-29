@@ -2,61 +2,29 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import VideoPlayer from '../video-player/video-player.jsx';
 
-const PREVIEW_DELAY = 1000;
 
 class SmallMovieCard extends PureComponent {
   constructor(props) {
     super(props);
-
-    this.state = {
-      isPlaying: false,
-    };
-
-    this._timeoutFunc = null;
-
-    this._handleMovieCardHoverStart = this._handleMovieCardHoverStart.bind(this);
-    this._handleMovieCardHoverEnd = this._handleMovieCardHoverEnd.bind(this);
-  }
-
-  _handleMovieCardHoverStart() {
-    this._timeoutFunc = setTimeout(() => {
-      this.setState({
-        isPlaying: true,
-      });
-    }, PREVIEW_DELAY);
-  }
-
-  _handleMovieCardHoverEnd() {
-    if (this._timeoutFunc) {
-      clearTimeout(this._timeoutFunc);
-      this.setState({
-        isPlaying: false,
-      });
-    }
   }
 
   render() {
-    const {movie, onMovieCardHover, onMovieCardClick} = this.props;
+    const {movie, onMovieCardClick, isPlaying, onMovieCardHoverStart, onMovieCardHoverEnd} = this.props;
 
     return (
       <article
         className="small-movie-card catalog__movies-card"
-        onMouseOver={() => onMovieCardHover(movie)}
-        onMouseEnter = {this._handleMovieCardHoverStart}
-        onMouseLeave = {this._handleMovieCardHoverEnd}
+        onMouseEnter = {onMovieCardHoverStart}
+        onMouseLeave = {onMovieCardHoverEnd}
         onClick={(evt) => {
           evt.preventDefault();
-          if (this._timeoutFunc) {
-            clearTimeout(this._timeoutFunc);
-          }
           onMovieCardClick(movie);
         }}>
         <div className="small-movie-card__image">
           <VideoPlayer
             src = {movie.preview}
-            isPlaying = {this.state.isPlaying}
+            isPlaying = {isPlaying}
             previewPic = {`img/${movie.posterSmall}`}
-            muted = {true}
           />
         </div>
         <h3 className="small-movie-card__title">
@@ -86,7 +54,9 @@ SmallMovieCard.propTypes = {
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     preview: PropTypes.string.isRequired,
   }).isRequired,
-  onMovieCardHover: PropTypes.func.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+  onMovieCardHoverStart: PropTypes.func.isRequired,
+  onMovieCardHoverEnd: PropTypes.func.isRequired,
   onMovieCardClick: PropTypes.func.isRequired,
 };
 
