@@ -29,6 +29,7 @@ const mockMovie = {
     `Actor #3, No Country for Old Men`,
     `Actor #4, No Country for Old Men`,
   ],
+  preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
 };
 
 it(`Checks if mouseovered film data is getting passed to callback function`, () => {

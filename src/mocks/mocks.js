@@ -21,6 +21,7 @@ const appMocks = {
       `Jude Law`,
       `Willem Dafoe`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   }
 };
 
@@ -47,6 +48,7 @@ const testMocks = {
       `Actor #3, No Country for Old Men`,
       `Actor #4, No Country for Old Men`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   movies: [
     {
@@ -71,6 +73,7 @@ const testMocks = {
         `Actor #3, Pulp Fiction`,
         `Actor #4, Pulp Fiction`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -94,6 +97,7 @@ const testMocks = {
         `Actor #3, Shutter Island`,
         `Actor #4, Shutter Island`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -117,6 +121,7 @@ const testMocks = {
         `Actor #3, Revenant`,
         `Actor #4, Revenant`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -140,6 +145,7 @@ const testMocks = {
         `Actor #3, Dardjeeling Limited`,
         `Actor #4, Dardjeeling Limited`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -163,6 +169,7 @@ const testMocks = {
         `Actor #3, Moonrise Kingdom`,
         `Actor #4, Moonrise Kingdom`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -186,6 +193,7 @@ const testMocks = {
         `Actor #3, War of the Worlds`,
         `Actor #4, War of the Worlds`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -209,6 +217,7 @@ const testMocks = {
         `Actor #3, Seven Years in Tibet`,
         `Actor #4, Seven Years in Tibet`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -232,6 +241,7 @@ const testMocks = {
         `Actor #3, Johnny English`,
         `Actor #4, Johnny English`,
       ],
+      preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
   ]};
 
