@@ -51,6 +51,7 @@ MoviesList.propTypes = {
     description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     director: PropTypes.string.isRequired,
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    preview: PropTypes.string.isRequired,
   }).isRequired).isRequired,
   onMovieTitleClick: PropTypes.func.isRequired,
 };
