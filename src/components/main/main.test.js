@@ -8,7 +8,11 @@ it(`Main should correctly render with promo movie information and movie titles a
     .create(<Main
       promoMovie = {testMocks.promoMovie}
       movies = {testMocks.movies}
-      onMovieTitleClick = {() => {}} />)
+      onMovieTitleClick = {() => {}} />, {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

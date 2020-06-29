@@ -6,22 +6,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
 >
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Pulp Fiction"
+      <video
         height="175"
-        src="img/pulp-fiction.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -33,22 +32,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Shutter Island"
+      <video
         height="175"
-        src="img/shutter-island.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -60,22 +58,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Revenant"
+      <video
         height="175"
-        src="img/revenant.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -87,22 +84,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Dardjeeling Limited"
+      <video
         height="175"
-        src="img/dardjeeling-limited.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -114,22 +110,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Moonrise Kingdom"
+      <video
         height="175"
-        src="img/moonrise-kingdom.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -141,22 +136,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="War of the Worlds"
+      <video
         height="175"
-        src="img/war-of-the-worlds.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -168,22 +162,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Seven Years in Tibet"
+      <video
         height="175"
-        src="img/seven-years-in-tibet.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
@@ -195,22 +188,21 @@ exports[`Checks if movies list is rendered correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
-      onClick={[Function]}
     >
-      <img
-        alt="Johnny English"
+      <video
         height="175"
-        src="img/johnny-english.jpg"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
         className="small-movie-card__link"

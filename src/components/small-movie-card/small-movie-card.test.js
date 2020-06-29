@@ -32,7 +32,11 @@ it(`Checks if small movie card is rendered correctly with hover and click handle
     .create(<SmallMovieCard
       movie = {mockMovie}
       onMovieCardHover = {() => {}}
-      onMovieCardClick = {() => {}} />)
+      onMovieCardClick = {() => {}} />, {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();
