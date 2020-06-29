@@ -45,7 +45,7 @@ export default [
       `Actor #3, Bohemian Rhapsody`,
       `Actor #4, Bohemian Rhapsody`,
     ],
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -93,7 +93,7 @@ export default [
       `Actor #3, Snatch`,
       `Actor #4, Snatch`,
     ],
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -141,7 +141,7 @@ export default [
       `Actor #3, War of the Worlds`,
       `Actor #4, War of the Worlds`,
     ],
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -189,6 +189,6 @@ export default [
       `Actor #3, Johnny English`,
       `Actor #4, Johnny English`,
     ],
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
 ];
