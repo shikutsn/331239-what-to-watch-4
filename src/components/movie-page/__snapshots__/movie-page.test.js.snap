@@ -266,13 +266,15 @@ Array [
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <video
               height="175"
+              muted={true}
+              poster="img/pulp-fiction.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               width="280"
             />
           </div>
@@ -292,13 +294,15 @@ Array [
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <video
               height="175"
+              muted={true}
+              poster="img/shutter-island.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               width="280"
             />
           </div>
@@ -318,13 +322,15 @@ Array [
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <video
               height="175"
+              muted={true}
+              poster="img/revenant.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               width="280"
             />
           </div>
@@ -344,13 +350,15 @@ Array [
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <video
               height="175"
+              muted={true}
+              poster="img/dardjeeling-limited.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
               width="280"
             />
           </div>
