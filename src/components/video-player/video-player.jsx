@@ -31,9 +31,9 @@ class VideoPlayer extends PureComponent {
     const {src, previewPic} = this.props;
 
     return (
-      <video ref={this._videoRef}
-        width="280"
-        height="175"
+      <video ref = {this._videoRef}
+        width = "280"
+        height = "175"
         muted = {true}
         src = {src}
         poster = {previewPic}

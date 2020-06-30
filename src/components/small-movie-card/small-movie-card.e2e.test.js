@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, {shallow, mount} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SmallMovieCard from './small-movie-card.jsx';
 
@@ -32,30 +32,15 @@ const mockMovie = {
   preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
 };
 
-it(`Checks if mouseovered film data is getting passed to callback function`, () => {
-  const onMovieCardHoverHandler = jest.fn();
-
-  const smallMovieCardComponent = shallow(
-      <SmallMovieCard
-        movie = {mockMovie}
-        onMovieCardHover = {onMovieCardHoverHandler}
-        onMovieCardClick = {() => {}}
-      />
-  );
-
-  smallMovieCardComponent.find(`.small-movie-card`).props().onMouseOver();
-
-  expect(onMovieCardHoverHandler).toHaveBeenCalledTimes(1);
-  expect(onMovieCardHoverHandler.mock.calls[0][0]).toMatchObject(mockMovie);
-});
-
 it(`Checks if movie titles are clickable in SmallMovieCard`, () => {
   const movieTitleClickHandler = jest.fn();
 
   const smallMovieCardComponent = mount(
       <SmallMovieCard
         movie = {mockMovie}
-        onMovieCardHover = {() => {}}
+        isPlaying = {false}
+        onMovieCardHoverStart = {() => {}}
+        onMovieCardHoverEnd = {() => {}}
         onMovieCardClick = {movieTitleClickHandler}
       />
   );
@@ -73,7 +58,9 @@ it(`Checks if movie images are clickable in SmallMovieCard`, () => {
   const smallMovieCardComponent = mount(
       <SmallMovieCard
         movie = {mockMovie}
-        onMovieCardHover = {() => {}}
+        isPlaying = {false}
+        onMovieCardHoverStart = {() => {}}
+        onMovieCardHoverEnd = {() => {}}
         onMovieCardClick = {movieTitleClickHandler}
       />
   );
@@ -83,4 +70,27 @@ it(`Checks if movie images are clickable in SmallMovieCard`, () => {
   smallMovieCards.forEach((smallMovieCard) => smallMovieCard.simulate(`click`));
 
   expect(movieTitleClickHandler.mock.calls.length).toBe(1);
+});
+
+it(`Checks if SmallMovieCard is hovered and unhovered correctly`, () => {
+  const movieCardHoverStartHandler = jest.fn();
+  const movieCardHoverEndHandler = jest.fn();
+
+  const smallMovieCardComponent = mount(
+      <SmallMovieCard
+        movie = {mockMovie}
+        isPlaying = {false}
+        onMovieCardHoverStart = {movieCardHoverStartHandler}
+        onMovieCardHoverEnd = {movieCardHoverEndHandler}
+        onMovieCardClick = {() => {}}
+      />
+  );
+
+  const smallMovieCards = smallMovieCardComponent.find(`.small-movie-card`);
+
+  smallMovieCards.forEach((smallMovieCard) => smallMovieCard.simulate(`mouseenter`));
+  smallMovieCards.forEach((smallMovieCard) => smallMovieCard.simulate(`mouseleave`));
+
+  expect(movieCardHoverStartHandler.mock.calls.length).toBe(1);
+  expect(movieCardHoverEndHandler.mock.calls.length).toBe(1);
 });

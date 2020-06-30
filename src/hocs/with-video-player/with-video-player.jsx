@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 
-const PREVIEW_DELAY = 0;
+const PREVIEW_DELAY = 1000;
 
 const withVideoPlayer = (Component) => {
   class WithVideoPlayer extends PureComponent {

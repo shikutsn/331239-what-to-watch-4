@@ -31,7 +31,9 @@ it(`Checks if small movie card is rendered correctly with hover and click handle
   const tree = renderer
     .create(<SmallMovieCard
       movie = {mockMovie}
-      onMovieCardHover = {() => {}}
+      isPlaying = {false}
+      onMovieCardHoverStart = {() => {}}
+      onMovieCardHoverEnd = {() => {}}
       onMovieCardClick = {() => {}} />, {
       createNodeMock: () => {
         return {};
