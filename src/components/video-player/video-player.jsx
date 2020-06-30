@@ -8,6 +8,15 @@ class VideoPlayer extends PureComponent {
     this._videoRef = createRef();
   }
 
+  componentDidMount() {
+    const {src, previewPic} = this.props;
+    const video = this._videoRef.current;
+
+    video.src = src;
+    video.poster = previewPic;
+    video.muted = true;
+  }
+
   componentWillUnmount() {
     const video = this._videoRef.current;
 
@@ -28,15 +37,10 @@ class VideoPlayer extends PureComponent {
   }
 
   render() {
-    const {src, previewPic} = this.props;
-
     return (
       <video ref = {this._videoRef}
         width = "280"
         height = "175"
-        muted = {true}
-        src = {src}
-        poster = {previewPic}
       />
     );
   }
