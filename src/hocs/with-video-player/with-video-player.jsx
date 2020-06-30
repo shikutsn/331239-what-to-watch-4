@@ -1,9 +1,9 @@
 import React, {PureComponent} from "react";
 
-const PREVIEW_DELAY = 1000;
+const PREVIEW_DELAY = 0;
 
-export default function withVideoHover(Component) {
-  return class WithVideoHover extends PureComponent {
+const withVideoPlayer = (Component) => {
+  class WithVideoPlayer extends PureComponent {
     constructor(props) {
       super(props);
 
@@ -11,25 +11,25 @@ export default function withVideoHover(Component) {
         isHovered: false,
       };
 
-      this._timeoutFunc = null;
+      this._timeoutId = null;
 
       this._handleMovieCardHoverStart = this._handleMovieCardHoverStart.bind(this);
       this._handleMovieCardHoverEnd = this._handleMovieCardHoverEnd.bind(this);
     }
 
     _handleMovieCardHoverStart() {
-      this._timeoutFunc = setTimeout(() => {
+      this._timeoutId = setTimeout(() => {
         this.setState({isHovered: true});
       }, PREVIEW_DELAY);
     }
 
     _handleMovieCardHoverEnd() {
-      clearTimeout(this._timeoutFunc);
+      clearTimeout(this._timeoutId);
       this.setState({isHovered: false});
     }
 
     componentWillUnmount() {
-      clearTimeout(this._timeoutFunc);
+      clearTimeout(this._timeoutId);
     }
 
     render() {
@@ -42,5 +42,9 @@ export default function withVideoHover(Component) {
         />
       );
     }
-  };
-}
+  }
+
+  return WithVideoPlayer;
+};
+
+export default withVideoPlayer;
