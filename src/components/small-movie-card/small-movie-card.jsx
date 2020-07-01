@@ -1,41 +1,33 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import VideoPlayer from '../video-player/video-player.jsx';
 
 
-class SmallMovieCard extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const {movie, onMovieCardClick, isPlaying, onMovieCardHoverStart, onMovieCardHoverEnd} = this.props;
-
-    return (
-      <article
-        className="small-movie-card catalog__movies-card"
-        onMouseEnter = {onMovieCardHoverStart}
-        onMouseLeave = {onMovieCardHoverEnd}
-        onClick={(evt) => {
-          evt.preventDefault();
-          onMovieCardClick(movie);
-        }}>
-        <div className="small-movie-card__image">
-          <VideoPlayer
-            src = {movie.preview}
-            isPlaying = {isPlaying}
-            previewPic = {`img/${movie.posterSmall}`}
-          />
-        </div>
-        <h3 className="small-movie-card__title">
-          <a
-            className="small-movie-card__link"
-            href="movie-page.html">{movie.title}</a>
-        </h3>
-      </article>
-    );
-  }
-}
+const SmallMovieCard = (props) => {
+  return (
+    <article
+      className="small-movie-card catalog__movies-card"
+      onMouseEnter = {props.onMovieCardHoverStart}
+      onMouseLeave = {props.onMovieCardHoverEnd}
+      onClick={(evt) => {
+        evt.preventDefault();
+        props.onMovieCardClick(props.movie);
+      }}>
+      <div className="small-movie-card__image">
+        <VideoPlayer
+          src = {props.movie.preview}
+          isPlaying = {props.isPlaying}
+          previewPic = {`img/${props.movie.posterSmall}`}
+        />
+      </div>
+      <h3 className="small-movie-card__title">
+        <a
+          className="small-movie-card__link"
+          href="movie-page.html">{props.movie.title}</a>
+      </h3>
+    </article>
+  );
+};
 
 SmallMovieCard.propTypes = {
   movie: PropTypes.shape({
