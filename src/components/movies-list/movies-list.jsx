@@ -1,40 +1,22 @@
-import React, {PureComponent} from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import SmallMovieCard from "../small-movie-card/small-movie-card.jsx";
+import withVideoPlayer from "../../hocs/with-video-player/with-video-player.jsx";
 
-class MoviesList extends PureComponent {
-  constructor(props) {
-    super(props);
+const SmallMovieCardWrapped = withVideoPlayer(SmallMovieCard);
 
-    this.state = {
-      activeMovie: null,
-    };
-
-    this.handleMovieCardHover = this.handleMovieCardHover.bind(this);
-  }
-
-  handleMovieCardHover(hoveredMovie) {
-    this.setState({
-      activeMovie: hoveredMovie,
-    });
-  }
-
-  render() {
-    const {movies, onMovieTitleClick} = this.props;
-
-    return (
-      <div className="catalog__movies-list">
-        {movies.map((movie, index) => (
-          <SmallMovieCard
-            key={movie.title + index}
-            movie={movie}
-            onMovieCardHover={this.handleMovieCardHover}
-            onMovieCardClick={onMovieTitleClick} />
-        ))}
-      </div>
-    );
-  }
-}
+const MoviesList = (props) => {
+  return (
+    <div className="catalog__movies-list">
+      {props.movies.map((movie, index) => (
+        <SmallMovieCardWrapped
+          key = {movie.title + index}
+          movie = {movie}
+          onMovieCardClick = {props.onMovieTitleClick} />
+      ))}
+    </div>
+  );
+};
 
 MoviesList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({
@@ -51,6 +33,7 @@ MoviesList.propTypes = {
     description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     director: PropTypes.string.isRequired,
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    preview: PropTypes.string.isRequired,
   }).isRequired).isRequired,
   onMovieTitleClick: PropTypes.func.isRequired,
 };

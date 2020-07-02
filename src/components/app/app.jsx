@@ -76,6 +76,7 @@ App.propTypes = {
     description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     director: PropTypes.string.isRequired,
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    preview: PropTypes.string.isRequired,
   }).isRequired,
   movies: PropTypes.arrayOf(PropTypes.shape({
     background: PropTypes.string.isRequired,
@@ -91,6 +92,7 @@ App.propTypes = {
     description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     director: PropTypes.string.isRequired,
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    preview: PropTypes.string.isRequired,
   }).isRequired).isRequired,
 };
 

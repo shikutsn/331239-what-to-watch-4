@@ -8,7 +8,11 @@ it(`Movie page should correctly render`, () => {
     .create(<MoviePage
       movie = {testMocks.promoMovie}
       movies = {testMocks.movies}
-      onMovieTitleClick = {() => {}} />)
+      onMovieTitleClick = {() => {}} />, {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

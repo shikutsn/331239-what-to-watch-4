@@ -24,14 +24,21 @@ const mockMovie = {
     `Actor #3, No Country for Old Men`,
     `Actor #4, No Country for Old Men`,
   ],
+  preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
 };
 
 it(`Checks if small movie card is rendered correctly with hover and click handlers`, () => {
   const tree = renderer
     .create(<SmallMovieCard
       movie = {mockMovie}
-      onMovieCardHover = {() => {}}
-      onMovieCardClick = {() => {}} />)
+      isPlaying = {false}
+      onMovieCardHoverStart = {() => {}}
+      onMovieCardHoverEnd = {() => {}}
+      onMovieCardClick = {() => {}} />, {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

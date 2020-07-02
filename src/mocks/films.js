@@ -21,6 +21,7 @@ export default [
       `Actor #3, No Country for Old Men`,
       `Actor #4, No Country for Old Men`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -44,6 +45,7 @@ export default [
       `Actor #3, Bohemian Rhapsody`,
       `Actor #4, Bohemian Rhapsody`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -67,6 +69,7 @@ export default [
       `Actor #3, Revenant`,
       `Actor #4, Revenant`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -90,6 +93,7 @@ export default [
       `Actor #3, Snatch`,
       `Actor #4, Snatch`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -113,6 +117,7 @@ export default [
       `Actor #3, Moonrise Kingdom`,
       `Actor #4, Moonrise Kingdom`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -136,6 +141,7 @@ export default [
       `Actor #3, War of the Worlds`,
       `Actor #4, War of the Worlds`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -159,6 +165,7 @@ export default [
       `Actor #3, Seven Years in Tibet`,
       `Actor #4, Seven Years in Tibet`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -182,5 +189,6 @@ export default [
       `Actor #3, Johnny English`,
       `Actor #4, Johnny English`,
     ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
 ];

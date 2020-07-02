@@ -1,34 +1,33 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import VideoPlayer from '../video-player/video-player.jsx';
 
-class SmallMovieCard extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
 
-  render() {
-    const {movie, onMovieCardHover, onMovieCardClick} = this.props;
-
-    return (
-      <article
-        className="small-movie-card catalog__movies-card"
-        onMouseOver={() => onMovieCardHover(movie)} >
-        <div className="small-movie-card__image" onClick = {() => onMovieCardClick(movie)}>
-          <img src={`img/${movie.posterSmall}`} alt={movie.title} width="280" height="175" />
-        </div>
-        <h3 className="small-movie-card__title" onClick={(evt) => {
-          evt.preventDefault();
-          onMovieCardClick(movie);
-        }
-        }>
-          <a
-            className="small-movie-card__link"
-            href="movie-page.html">{movie.title}</a>
-        </h3>
-      </article>
-    );
-  }
-}
+const SmallMovieCard = (props) => {
+  return (
+    <article
+      className="small-movie-card catalog__movies-card"
+      onMouseEnter = {props.onMovieCardHoverStart}
+      onMouseLeave = {props.onMovieCardHoverEnd}
+      onClick={(evt) => {
+        evt.preventDefault();
+        props.onMovieCardClick(props.movie);
+      }}>
+      <div className="small-movie-card__image">
+        <VideoPlayer
+          src = {props.movie.preview}
+          isPlaying = {props.isPlaying}
+          previewPic = {`img/${props.movie.posterSmall}`}
+        />
+      </div>
+      <h3 className="small-movie-card__title">
+        <a
+          className="small-movie-card__link"
+          href="movie-page.html">{props.movie.title}</a>
+      </h3>
+    </article>
+  );
+};
 
 SmallMovieCard.propTypes = {
   movie: PropTypes.shape({
@@ -45,8 +44,11 @@ SmallMovieCard.propTypes = {
     description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     director: PropTypes.string.isRequired,
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    preview: PropTypes.string.isRequired,
   }).isRequired,
-  onMovieCardHover: PropTypes.func.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+  onMovieCardHoverStart: PropTypes.func.isRequired,
+  onMovieCardHoverEnd: PropTypes.func.isRequired,
   onMovieCardClick: PropTypes.func.isRequired,
 };
 

@@ -3,22 +3,20 @@
 exports[`Checks if small movie card is rendered correctly with hover and click handlers 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
-  onMouseOver={[Function]}
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <div
     className="small-movie-card__image"
-    onClick={[Function]}
   >
-    <img
-      alt="No Country for Old Men"
+    <video
       height="175"
-      src="img/no-country-for-old-men.jpg"
       width="280"
     />
   </div>
   <h3
     className="small-movie-card__title"
-    onClick={[Function]}
   >
     <a
       className="small-movie-card__link"

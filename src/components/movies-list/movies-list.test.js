@@ -7,7 +7,11 @@ it(`Checks if movies list is rendered correctly`, () => {
   const tree = renderer
     .create(<MoviesList
       movies = {testMocks.movies}
-      onMovieTitleClick = {() => {}} />)
+      onMovieTitleClick = {() => {}} />, {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();
