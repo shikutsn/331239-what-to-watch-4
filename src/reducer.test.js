@@ -3,17 +3,17 @@ import {testMocks} from "./mocks/films.js";
 
 it(`Checks that state initializes properly`, () => {
   expect(reducer({
-    genre: ``,
+    genre: Genres[0],
     films: testMocks,
   }, {})).toEqual({
-    genre: ``,
+    genre: Genres[0],
     films: testMocks,
   });
 });
 
 it(`Checks that genres are switched properly`, () => {
   expect(reducer({
-    genre: ``,
+    genre: Genres[0],
     films: testMocks,
   }, {
     type: ActionTypes.SWITCH_GENRE,
@@ -26,17 +26,17 @@ it(`Checks that genres are switched properly`, () => {
 
 
 describe(`Checks if action creators work properly`, () => {
-  it(`Checks if action creators change genre to genre 0`, () => {
-    expect(ActionCreator.switchGenre(Genres[0])).toEqual({
-      type: ActionTypes.SWITCH_GENRE,
-      payload: Genres[0],
-    });
-  });
-
   it(`Checks if action creators change genre to genre 1`, () => {
     expect(ActionCreator.switchGenre(Genres[1])).toEqual({
       type: ActionTypes.SWITCH_GENRE,
       payload: Genres[1],
+    });
+  });
+
+  it(`Checks if action creators change genre to genre 2`, () => {
+    expect(ActionCreator.switchGenre(Genres[2])).toEqual({
+      type: ActionTypes.SWITCH_GENRE,
+      payload: Genres[2],
     });
   });
 

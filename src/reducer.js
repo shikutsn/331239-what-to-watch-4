@@ -1,8 +1,10 @@
 import {extend, removeDuplicates} from "./utils.js";
 import films from "./mocks/films.js";
 
+const GENRES_ALL = ``;
+
 const initialState = {
-  genre: ``,
+  genre: GENRES_ALL,
   films,
 };
 
@@ -23,13 +25,14 @@ const ActionCreator = {
 };
 
 const getFilteredFilms = (genre, filmsList) => {
-  return genre === `` ? filmsList : filmsList.filter((film) => film.genre.toUpperCase() === genre.toUpperCase());
+  return genre === GENRES_ALL ? filmsList : filmsList.filter((film) => film.genre.toUpperCase() === genre.toUpperCase());
 };
 
 const getGenresList = (filmsList) => {
   return removeDuplicates(filmsList.map((film) => film.genre));
 };
-const Genres = getGenresList(films);
+// пустая строка - все жанры, и она будет нулевым элементом в списке жанров
+const Genres = [GENRES_ALL].concat(getGenresList(films));
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
