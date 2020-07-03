@@ -2,12 +2,12 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `No Country for Old Men`,
-    genre: `genre of No Country for Old Men`,
+    genre: `Drama`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `no-country-for-old-men.jpg`,
     rating: {
-      value: 8.9,
+      value: 8.92,
       votesCount: 240,
     },
     description: [
@@ -26,7 +26,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Bohemian Rhapsody`,
-    genre: `genre of Bohemian Rhapsody`,
+    genre: `Romance`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `bohemian-rhapsody.jpg`,
@@ -50,7 +50,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Revenant`,
-    genre: `genre of Revenant`,
+    genre: `Drama`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `revenant.jpg`,
@@ -74,7 +74,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Snatch`,
-    genre: `genre of Snatch`,
+    genre: `Crime`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `snatch.jpg`,
@@ -98,7 +98,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Moonrise Kingdom`,
-    genre: `genre of Moonrise Kingdom`,
+    genre: `Drama`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `moonrise-kingdom.jpg`,
@@ -122,7 +122,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `War of the Worlds`,
-    genre: `genre of War of the Worlds`,
+    genre: `Comedy`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `war-of-the-worlds.jpg`,
@@ -146,7 +146,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Seven Years in Tibet`,
-    genre: `genre of Seven Years in Tibet`,
+    genre: `Comedy`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `seven-years-in-tibet.jpg`,
@@ -170,7 +170,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Johnny English`,
-    genre: `genre of Johnny English`,
+    genre: `Crime`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `johnny-english.jpg`,
@@ -188,6 +188,30 @@ export default [
       `Actor #2, Johnny English`,
       `Actor #3, Johnny English`,
       `Actor #4, Johnny English`,
+    ],
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    title: `Pulp Fiction`,
+    genre: `Crime`,
+    releaseYear: 1998,
+    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    posterSmall: `pulp-fiction.jpg`,
+    rating: {
+      value: 9.57,
+      votesCount: 200,
+    },
+    description: [
+      `Paragraph #1 of description for Snatch`,
+      `Paragraph #2 of description for Snatch`,
+    ],
+    director: `director of Snatch`,
+    starring: [
+      `Actor #1, Snatch`,
+      `Actor #2, Snatch`,
+      `Actor #3, Snatch`,
+      `Actor #4, Snatch`,
     ],
     preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },

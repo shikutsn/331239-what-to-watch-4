@@ -105,7 +105,7 @@ class MoviePage extends PureComponent {
                 </nav>
 
                 <div className="movie-rating">
-                  <div className="movie-rating__score">{rating.value}</div>
+                  <div className="movie-rating__score">{rating.value.toFixed(1)}</div>
                   <p className="movie-rating__meta">
                     <span className="movie-rating__level">{MoviePage._getRatingDescription(rating.value)}</span>
                     <span className="movie-rating__count">{rating.votesCount} ratings</span>
