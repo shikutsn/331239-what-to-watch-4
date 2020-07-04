@@ -1,0 +1,4 @@
+const GENRES_ALL = ``;
+const GENRES_MAX_COUNT = 10;
+
+export {GENRES_ALL, GENRES_MAX_COUNT};
