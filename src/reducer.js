@@ -5,6 +5,7 @@ import {Genres} from "./const.js";
 const initialState = {
   genre: Genres.ALL_TEXT,
   movies,
+  filteredMovies: movies,
 };
 
 const ActionTypes = {
@@ -17,7 +18,7 @@ const ActionCreator = {
     type: ActionTypes.SWITCH_GENRE,
     payload: genre,
   }),
-  filteredMovies: () => ({
+  filterMovies: () => ({
     type: ActionTypes.FILTER_MOVIES,
     payload: null,
   }),
@@ -34,12 +35,11 @@ const reducer = (state = initialState, action) => {
         genre: action.payload
       });
     case ActionTypes.FILTER_MOVIES:
-      const filteredMovies = getFilteredMovies(state.genre, initialState.movies);
       return extend(state, {
-        movies: filteredMovies
+        filteredMovies: getFilteredMovies(state.genre, state.movies),
       });
   }
   return state;
 };
 
-export {reducer, ActionTypes, ActionCreator};
+export {reducer, ActionTypes, ActionCreator, getFilteredMovies};

@@ -2,25 +2,38 @@ import React from "react";
 import renderer from "react-test-renderer";
 import MoviePage from "./movie-page.jsx";
 import {testMocks} from "../../mocks/mocks.js";
+import configureStore from "redux-mock-store";
+import {Provider} from "react-redux";
+import {Genres} from "../../const.js";
+
+
+const mockStore = configureStore([]);
+
+const store = mockStore({
+  genre: Genres.ALL_TEXT,
+  movies: testMocks.movies,
+  filteredMovies: testMocks.movies,
+});
 
 it(`Movie page should correctly render`, () => {
   const tree = renderer
-    .create(<MoviePage
-      movie = {testMocks.promoMovie}
-      movies = {testMocks.movies}
-      onMovieTitleClick = {() => {}} />, {
-      createNodeMock: () => {
-        return {};
-      }
-    })
+    .create(
+        <Provider store = {store}>
+          <MoviePage
+            movie = {testMocks.promoMovie}
+            movies = {testMocks.movies}
+            onMovieTitleClick = {() => {}} />
+        </Provider>, {
+          createNodeMock: () => {
+            return {};
+          }
+        })
     .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
 
 it(`Tests if _getRatingDescription returns correct rating to text values`, () => {
-  // npm run test.jest -- -t "_getRatingDescription"
-
   expect(MoviePage._getRatingDescription(0)).toBe(`Bad`);
   expect(MoviePage._getRatingDescription(1.5)).toBe(`Bad`);
   expect(MoviePage._getRatingDescription(3)).toBe(`Normal`);

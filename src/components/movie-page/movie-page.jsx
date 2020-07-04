@@ -126,7 +126,7 @@ class MoviePage extends PureComponent {
           <section className="catalog catalog--like-this">
             <h2 className="catalog__title">More like this</h2>
             <MoviesList
-              movies = {this._getSimilarMovies()}
+              genre = {genre}
               onMovieTitleClick = {this.props.onMovieTitleClick}
             />
           </section>

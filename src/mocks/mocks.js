@@ -54,7 +54,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Pulp Fiction`,
-      genre: `genre of Pulp Fiction`,
+      genre: `Crime`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `pulp-fiction.jpg`,
@@ -78,7 +78,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Shutter Island`,
-      genre: `genre of Shutter Island`,
+      genre: `Drama`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `shutter-island.jpg`,
@@ -102,7 +102,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Revenant`,
-      genre: `genre of Revenant`,
+      genre: `Drama`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `revenant.jpg`,
@@ -126,7 +126,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Dardjeeling Limited`,
-      genre: `genre of Dardjeeling Limited`,
+      genre: `Horror`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `dardjeeling-limited.jpg`,
@@ -150,12 +150,12 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Moonrise Kingdom`,
-      genre: `genre of Moonrise Kingdom`,
+      genre: `Kids`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `moonrise-kingdom.jpg`,
       rating: {
-        value: 8.9,
+        value: 10,
         votesCount: 240,
       },
       description: [
@@ -174,7 +174,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `War of the Worlds`,
-      genre: `genre of War of the Worlds`,
+      genre: `Drama`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `war-of-the-worlds.jpg`,
@@ -198,7 +198,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Seven Years in Tibet`,
-      genre: `genre of Seven Years in Tibet`,
+      genre: `Romance`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `seven-years-in-tibet.jpg`,
@@ -222,7 +222,7 @@ const testMocks = {
     {
       background: `img/bg-the-grand-budapest-hotel.jpg`,
       title: `Johnny English`,
-      genre: `genre of Johnny English`,
+      genre: `Crime`,
       releaseYear: 2014,
       poster: `img/the-grand-budapest-hotel-poster.jpg`,
       posterSmall: `johnny-english.jpg`,
@@ -243,6 +243,8 @@ const testMocks = {
       ],
       preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     },
-  ]};
+  ],
+  genres: [`All genres`, `Crime`, `Drama`, `Horror`, `Kids`, `Romance`],
+};
 
 export {appMocks, testMocks};

@@ -70,7 +70,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onGenreTitleClick(genre) {
     dispatch(ActionCreator.switchGenre(genre));
-    dispatch(ActionCreator.filteredMovies());
+    dispatch(ActionCreator.filterMovies());
   }
 });
 

@@ -3,9 +3,20 @@ import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
 import {testMocks} from "../../mocks/mocks.js";
+import configureStore from "redux-mock-store";
+import {Provider} from "react-redux";
+import {Genres} from "../../const.js";
 
 Enzyme.configure({
   adapter: new Adapter(),
+});
+
+const mockStore = configureStore([]);
+
+const store = mockStore({
+  genre: Genres.ALL_TEXT,
+  movies: testMocks.movies,
+  filteredMovies: testMocks.movies,
 });
 
 describe(`e2e tests for Main`, () => {
@@ -13,11 +24,12 @@ describe(`e2e tests for Main`, () => {
     const movieTitleClickHandler = jest.fn();
 
     const mainComponent = mount(
-        <Main
-          promoMovie = {testMocks.promoMovie}
-          movies = {testMocks.movies}
-          onMovieTitleClick = {movieTitleClickHandler}
-        />
+        <Provider store = {store}>
+          <Main
+            promoMovie = {testMocks.promoMovie}
+            onMovieTitleClick = {movieTitleClickHandler}
+          />
+        </Provider>
     );
 
     const movieTitles = mainComponent.find(`.small-movie-card__title`);
@@ -31,11 +43,12 @@ describe(`e2e tests for Main`, () => {
     const movieImageClickHandler = jest.fn();
 
     const mainComponent = mount(
-        <Main
-          promoMovie = {testMocks.promoMovie}
-          movies = {testMocks.movies}
-          onMovieTitleClick = {movieImageClickHandler}
-        />
+        <Provider store = {store}>
+          <Main
+            promoMovie = {testMocks.promoMovie}
+            onMovieTitleClick = {movieImageClickHandler}
+          />
+        </Provider>
     );
 
     const movieImages = mainComponent.find(`.small-movie-card__image`);
