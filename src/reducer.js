@@ -1,9 +1,9 @@
 import {extend} from "./utils.js";
 import movies from "./mocks/films.js";
-import {GENRES_ALL} from "./const.js";
+import {Genres} from "./const.js";
 
 const initialState = {
-  genre: GENRES_ALL,
+  genre: Genres.ALL_TEXT,
   movies,
 };
 
@@ -24,7 +24,7 @@ const ActionCreator = {
 };
 
 const getFilteredMovies = (genre, moviesList) => {
-  return genre === GENRES_ALL ? moviesList : moviesList.filter((film) => film.genre.toUpperCase() === genre.toUpperCase());
+  return genre === Genres.ALL_TEXT ? moviesList : moviesList.filter((film) => film.genre.toUpperCase() === genre.toUpperCase());
 };
 
 const reducer = (state = initialState, action) => {

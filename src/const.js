@@ -1,4 +1,6 @@
-const GENRES_ALL = ``;
-const GENRES_MAX_COUNT = 10;
+const Genres = {
+  MAX_COUNT: 10,
+  ALL_TEXT: `All genres`,
+};
 
-export {GENRES_ALL, GENRES_MAX_COUNT};
+export {Genres};

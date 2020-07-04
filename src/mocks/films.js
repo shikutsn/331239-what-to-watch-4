@@ -98,7 +98,7 @@ export default [
   {
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     title: `Moonrise Kingdom`,
-    genre: `Drama`,
+    genre: `Kids`,
     releaseYear: 2014,
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     posterSmall: `moonrise-kingdom.jpg`,
