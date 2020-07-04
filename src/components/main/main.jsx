@@ -8,7 +8,7 @@ class Main extends PureComponent {
   }
 
   render() {
-    const {promoMovie, movies, onMovieTitleClick} = this.props;
+    const {promoMovie, onMovieTitleClick} = this.props;
 
     return (
       <React.Fragment>
@@ -105,7 +105,6 @@ class Main extends PureComponent {
             </ul>
 
             <MoviesList
-              movies = {movies}
               onMovieTitleClick = {onMovieTitleClick}
             />
 

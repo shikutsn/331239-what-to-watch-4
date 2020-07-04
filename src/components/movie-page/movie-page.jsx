@@ -1,13 +1,13 @@
 import React, {PureComponent} from "react";
 import MoviesList from "../movies-list/movies-list.jsx";
 import PropTypes from "prop-types";
+import {connect} from "react-redux";
 
 const SIMILAR_MOVIES_COUNT = 4;
 
 class MoviePage extends PureComponent {
   constructor(props) {
     super(props);
-
   }
 
   static _getRatingDescription(rating) {
@@ -167,23 +167,16 @@ MoviePage.propTypes = {
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     preview: PropTypes.string.isRequired,
   }).isRequired,
-  movies: PropTypes.arrayOf(PropTypes.shape({
-    background: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired,
-    releaseYear: PropTypes.number.isRequired,
-    poster: PropTypes.string.isRequired,
-    posterSmall: PropTypes.string.isRequired,
-    rating: PropTypes.shape({
-      value: PropTypes.number.isRequired,
-      votesCount: PropTypes.number.isRequired
-    }).isRequired,
-    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    director: PropTypes.string.isRequired,
-    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    preview: PropTypes.string.isRequired,
-  }).isRequired).isRequired,
   onMovieTitleClick: PropTypes.func.isRequired,
 };
 
-export default MoviePage;
+
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies,
+  };
+};
+
+
+export {MoviePage};
+export default connect(mapStateToProps)(MoviePage);

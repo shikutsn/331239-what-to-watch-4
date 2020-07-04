@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SmallMovieCard from "../small-movie-card/small-movie-card.jsx";
 import withVideoPlayer from "../../hocs/with-video-player/with-video-player.jsx";
+import {connect} from "react-redux";
 
 const SmallMovieCardWrapped = withVideoPlayer(SmallMovieCard);
 
@@ -38,4 +39,12 @@ MoviesList.propTypes = {
   onMovieTitleClick: PropTypes.func.isRequired,
 };
 
-export default MoviesList;
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies,
+  };
+};
+
+
+export {MoviesList};
+export default connect(mapStateToProps)(MoviesList);

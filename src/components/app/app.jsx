@@ -4,6 +4,7 @@ import Main from "../main/main.jsx";
 import MoviePage from "../movie-page/movie-page.jsx";
 import PropTypes from "prop-types";
 
+
 class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -20,13 +21,12 @@ class App extends PureComponent {
   }
 
   _renderApp() {
-    const {promoMovie, movies} = this.props;
+    const {promoMovie} = this.props;
 
     if (this.state.currentMovie) {
       return (
         <MoviePage
           movie = {this.state.currentMovie}
-          movies = {movies}
           onMovieTitleClick = {this.movieTitleClickHandler}
         />
       );
@@ -35,7 +35,6 @@ class App extends PureComponent {
     return (
       <Main
         promoMovie = {promoMovie}
-        movies = {movies}
         onMovieTitleClick = {this.movieTitleClickHandler}
       />
     );
@@ -51,7 +50,6 @@ class App extends PureComponent {
           <Route exact path="/dev-movie-page">
             <MoviePage
               movie = {this.props.promoMovie}
-              movies = {this.props.movies}
               onMovieTitleClick = {this.movieTitleClickHandler}
             />
           </Route>
