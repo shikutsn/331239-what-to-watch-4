@@ -2,8 +2,8 @@ import React, {PureComponent} from "react";
 import MoviesList from "../movies-list/movies-list.jsx";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
+import {MoviesShown} from "../../const.js";
 
-const SIMILAR_MOVIES_COUNT = 4;
 
 class MoviePage extends PureComponent {
   constructor(props) {
@@ -22,13 +22,14 @@ class MoviePage extends PureComponent {
     return ``;
   }
 
-  _getSimilarMovies() {
-    // TODO WIP должна отбирать по жанру, но жанров сейчас нет (они все одинаковые)
-    return this.props.movies.slice().slice(0, SIMILAR_MOVIES_COUNT);
+  static _getSilimilarMovies(movie, moviesList) {
+    return moviesList.filter((currentMovie) => currentMovie.genre.toUpperCase() === movie.genre.toUpperCase() && movie.title !== currentMovie.title);
   }
 
   render() {
     const {background, title, genre, releaseYear, poster, rating, description, director, starring} = this.props.movie;
+
+    const similarMovies = MoviePage._getSilimilarMovies(this.props.movie, this.props.movies).slice(0, MoviesShown.MOVIE_PAGE);
 
     return (
       <React.Fragment>
@@ -123,13 +124,15 @@ class MoviePage extends PureComponent {
           </div>
         </section>
         <div className="page-content">
-          <section className="catalog catalog--like-this">
-            <h2 className="catalog__title">More like this</h2>
-            <MoviesList
-              genre = {genre}
-              onMovieTitleClick = {this.props.onMovieTitleClick}
-            />
-          </section>
+          {similarMovies.length &&
+            <section className="catalog catalog--like-this">
+              <h2 className="catalog__title">More like this</h2>
+              <MoviesList
+                movies = {similarMovies}
+                onMovieTitleClick = {this.props.onMovieTitleClick}
+              />
+            </section>
+          }
 
           <footer className="page-footer">
             <div className="logo">

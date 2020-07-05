@@ -2,14 +2,24 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import MoviesList from "../movies-list/movies-list.jsx";
 import GenresList from "../genres-list/genres-list.jsx";
+import ButtonShowMore from "../button-show-more/button-show-more.jsx";
+import {MoviesShown} from "../../const.js";
+import {connect} from "react-redux";
+
 
 class Main extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      shownMoviesCount: MoviesShown.MAIN_PAGE,
+    };
   }
 
   render() {
     const {promoMovie, onMovieTitleClick} = this.props;
+
+    const shownMovies = this.props.filteredMovies.slice(0, this.state.shownMoviesCount);
 
     return (
       <React.Fragment>
@@ -75,12 +85,19 @@ class Main extends PureComponent {
             <GenresList />
 
             <MoviesList
+              movies = {shownMovies}
               onMovieTitleClick = {onMovieTitleClick}
             />
 
-            <div className="catalog__more">
-              <button className="catalog__button" type="button">Show more</button>
-            </div>
+            {this.state.shownMoviesCount < this.props.filteredMovies.length &&
+            <ButtonShowMore
+              onButtonShowMoreClick = {() => {
+                const currentShownMovies = this.state.shownMoviesCount;
+                this.setState({
+                  shownMoviesCount: currentShownMovies + MoviesShown.MAIN_PAGE_MORE,
+                });
+              }} />
+            }
           </section>
 
           <footer className="page-footer">
@@ -119,8 +136,29 @@ Main.propTypes = {
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     preview: PropTypes.string.isRequired,
   }).isRequired,
+  filteredMovies: PropTypes.arrayOf(PropTypes.shape({
+    background: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired,
+    poster: PropTypes.string.isRequired,
+    posterSmall: PropTypes.string.isRequired,
+    rating: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      votesCount: PropTypes.number.isRequired
+    }).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    director: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    preview: PropTypes.string.isRequired,
+  }).isRequired).isRequired,
   onMovieTitleClick: PropTypes.func.isRequired,
 };
 
+const mapStateToProps = (state) => ({
+  filteredMovies: state.filteredMovies,
+});
 
-export default Main;
+
+export {Main};
+export default connect(mapStateToProps)(Main);

@@ -25,7 +25,7 @@ const ActionCreator = {
 };
 
 const getFilteredMovies = (genre, moviesList) => {
-  return genre === Genres.ALL_TEXT ? moviesList : moviesList.filter((film) => film.genre.toUpperCase() === genre.toUpperCase());
+  return genre === Genres.ALL_TEXT ? moviesList : moviesList.filter((movie) => movie.genre.toUpperCase() === genre.toUpperCase());
 };
 
 const reducer = (state = initialState, action) => {
