@@ -124,7 +124,7 @@ class MoviePage extends PureComponent {
           </div>
         </section>
         <div className="page-content">
-          {similarMovies.length &&
+          {!!similarMovies.length &&
             <section className="catalog catalog--like-this">
               <h2 className="catalog__title">More like this</h2>
               <MoviesList

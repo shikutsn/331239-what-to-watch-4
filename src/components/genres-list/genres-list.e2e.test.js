@@ -26,6 +26,7 @@ it(`Checks if genre items are clickable`, () => {
     item.simulate(`click`);
   });
 
+  // в мок-данных 5 разных жанров и 6-й - все жанры
   expect(onGenreTitleClick).toHaveBeenCalledTimes(6);
 });
 

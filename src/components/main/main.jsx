@@ -19,7 +19,7 @@ class Main extends PureComponent {
   render() {
     const {promoMovie, onMovieTitleClick} = this.props;
 
-    const shownMovies = this.props.filteredMovies.slice(0, this.state.shownMoviesCount);
+    const shownMovies = this.props.movies.slice(0, this.state.shownMoviesCount);
 
     return (
       <React.Fragment>
@@ -89,7 +89,7 @@ class Main extends PureComponent {
               onMovieTitleClick = {onMovieTitleClick}
             />
 
-            {this.state.shownMoviesCount < this.props.filteredMovies.length &&
+            {this.state.shownMoviesCount < this.props.movies.length &&
             <ButtonShowMore
               onButtonShowMoreClick = {() => {
                 const currentShownMovies = this.state.shownMoviesCount;
@@ -136,7 +136,7 @@ Main.propTypes = {
     starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     preview: PropTypes.string.isRequired,
   }).isRequired,
-  filteredMovies: PropTypes.arrayOf(PropTypes.shape({
+  movies: PropTypes.arrayOf(PropTypes.shape({
     background: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,
@@ -156,7 +156,7 @@ Main.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  filteredMovies: state.filteredMovies,
+  movies: state.filteredMovies,
 });
 
 

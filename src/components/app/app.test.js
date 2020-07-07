@@ -19,8 +19,7 @@ it(`App should correctly render with promo movie information and movies array`, 
     .create(
         <Provider store = {store}>
           <App
-            promoMovie = {testMocks.promoMovie}
-            movies = {testMocks.movies} />
+            promoMovie = {testMocks.promoMovie} />
         </Provider>, {
           createNodeMock: () => {
             return {};

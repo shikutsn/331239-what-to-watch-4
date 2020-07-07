@@ -3,7 +3,7 @@ const extend = (a, b) => {
 };
 
 const removeDuplicates = (array) => {
-  return array.filter((item, position) => array.indexOf(item) === position);
+  return [...new Set(array)];
 };
 
 export {extend, removeDuplicates};
